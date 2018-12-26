@@ -5,7 +5,6 @@
 #ifndef _UTILS_IO_H_
 #define _UTILS_IO_H_
 
-#include <boost/filesystem.hpp>
 #include <iomanip>
 #include <iostream>  // NOLINT(readability/streams)
 #include <string>
@@ -16,7 +15,6 @@ namespace bmnet {
 
 using std::string;
 using ::google::protobuf::Message;
-using ::boost::filesystem::path;
 
 bool ReadProtoFromTextFile(const char* filename, Message* proto);
 inline bool ReadProtoFromTextFile(const string& filename, Message* proto) {
